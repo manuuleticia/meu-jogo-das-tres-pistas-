@@ -1,0 +1,560 @@
+
+export default function GeoQuizBrasil() {
+  const perguntasBase = [
+    {
+      pergunta: 'Qual é a capital do Brasil?',
+      opcoes: ['Brasília', 'Rio de Janeiro', 'São Paulo', 'Salvador'],
+      resposta: 'Brasília',
+      categoria: 'Capitais'
+    },
+    {
+      pergunta: 'Em qual continente fica o Egito?',
+      opcoes: ['África', 'Ásia', 'Europa', 'Oceania'],
+      resposta: 'África',
+      categoria: 'Continentes'
+    },
+    {
+      pergunta: 'Qual clima predomina na Amazônia?',
+      opcoes: ['Polar', 'Tropical úmido', 'Desértico', 'Mediterrâneo'],
+      resposta: 'Tropical úmido',
+      categoria: 'Clima'
+    },
+    {
+      pergunta: 'Qual é o maior oceano do mundo?',
+      opcoes: ['Atlântico', 'Índico', 'Pacífico', 'Ártico'],
+      resposta: 'Pacífico',
+      categoria: 'Oceanos'
+    },
+    {
+      pergunta: 'Qual relevo possui grandes elevações?',
+      opcoes: ['Planície', 'Montanha', 'Vale', 'Depressão'],
+      resposta: 'Montanha',
+      categoria: 'Relevo'
+    },
+  ];
+
+  const perguntas = [
+  {
+    pergunta: 'Qual é a capital do Brasil?',
+    opcoes: ['Brasília', 'Rio de Janeiro', 'São Paulo', 'Salvador'],
+    resposta: 'Brasília',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital da Argentina?',
+    opcoes: ['Buenos Aires', 'Lima', 'Santiago', 'Bogotá'],
+    resposta: 'Buenos Aires',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital do Japão?',
+    opcoes: ['Tóquio', 'Pequim', 'Seul', 'Bangkok'],
+    resposta: 'Tóquio',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital da França?',
+    opcoes: ['Paris', 'Roma', 'Madri', 'Lisboa'],
+    resposta: 'Paris',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital da Alemanha?',
+    opcoes: ['Berlim', 'Viena', 'Praga', 'Zurique'],
+    resposta: 'Berlim',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital do Canadá?',
+    opcoes: ['Toronto', 'Ottawa', 'Montreal', 'Vancouver'],
+    resposta: 'Ottawa',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual continente fica o Brasil?',
+    opcoes: ['Europa', 'Ásia', 'América do Sul', 'África'],
+    resposta: 'América do Sul',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual é o maior continente do mundo?',
+    opcoes: ['África', 'Europa', 'Ásia', 'Oceania'],
+    resposta: 'Ásia',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual continente possui mais países?',
+    opcoes: ['Europa', 'África', 'Ásia', 'América'],
+    resposta: 'África',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Em qual continente fica a Austrália?',
+    opcoes: ['Europa', 'África', 'Oceania', 'Ásia'],
+    resposta: 'Oceania',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual oceano banha o Brasil?',
+    opcoes: ['Pacífico', 'Atlântico', 'Índico', 'Ártico'],
+    resposta: 'Atlântico',
+    categoria: 'Oceanos'
+  },
+  {
+    pergunta: 'Qual é o maior oceano do mundo?',
+    opcoes: ['Atlântico', 'Índico', 'Pacífico', 'Ártico'],
+    resposta: 'Pacífico',
+    categoria: 'Oceanos'
+  },
+  {
+    pergunta: 'Qual país é conhecido pelas pirâmides?',
+    opcoes: ['Egito', 'México', 'China', 'Índia'],
+    resposta: 'Egito',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual é o maior país do mundo?',
+    opcoes: ['China', 'Canadá', 'Rússia', 'Estados Unidos'],
+    resposta: 'Rússia',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país tem formato de bota?',
+    opcoes: ['Chile', 'Portugal', 'Itália', 'México'],
+    resposta: 'Itália',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual clima predomina na Amazônia?',
+    opcoes: ['Polar', 'Desértico', 'Tropical úmido', 'Mediterrâneo'],
+    resposta: 'Tropical úmido',
+    categoria: 'Clima'
+  },
+  {
+    pergunta: 'Qual clima é típico dos desertos?',
+    opcoes: ['Polar', 'Temperado', 'Desértico', 'Equatorial'],
+    resposta: 'Desértico',
+    categoria: 'Clima'
+  },
+  {
+    pergunta: 'Qual relevo possui grandes elevações?',
+    opcoes: ['Vale', 'Planície', 'Montanha', 'Depressão'],
+    resposta: 'Montanha',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual linha imaginária divide a Terra em norte e sul?',
+    opcoes: ['Meridiano de Greenwich', 'Linha do Equador', 'Trópico de Câncer', 'Trópico de Capricórnio'],
+    resposta: 'Linha do Equador',
+    categoria: 'Mapas'
+  },
+  {
+    pergunta: 'Qual é a montanha mais alta do mundo?',
+    opcoes: ['Everest', 'Aconcágua', 'K2', 'Alpes'],
+    resposta: 'Everest',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual é a capital da Espanha?',
+    opcoes: ['Barcelona', 'Madri', 'Lisboa', 'Sevilha'],
+    resposta: 'Madri',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital da Itália?',
+    opcoes: ['Milão', 'Roma', 'Nápoles', 'Turim'],
+    resposta: 'Roma',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital de Portugal?',
+    opcoes: ['Porto', 'Lisboa', 'Coimbra', 'Faro'],
+    resposta: 'Lisboa',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual país fica na América do Norte?',
+    opcoes: ['Chile', 'Canadá', 'Peru', 'Argentina'],
+    resposta: 'Canadá',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país tem a maior população do mundo?',
+    opcoes: ['Índia', 'China', 'Brasil', 'Estados Unidos'],
+    resposta: 'Índia',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país é famoso pela Torre Eiffel?',
+    opcoes: ['Itália', 'França', 'Alemanha', 'Canadá'],
+    resposta: 'França',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual continente fica a China?',
+    opcoes: ['África', 'Europa', 'Ásia', 'Oceania'],
+    resposta: 'Ásia',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual continente fica o Egito?',
+    opcoes: ['África', 'Europa', 'Ásia', 'América'],
+    resposta: 'África',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual continente é coberto por gelo?',
+    opcoes: ['Europa', 'África', 'Antártida', 'Ásia'],
+    resposta: 'Antártida',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual é o menor continente do mundo?',
+    opcoes: ['Europa', 'Oceania', 'África', 'América'],
+    resposta: 'Oceania',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual clima possui temperaturas muito baixas?',
+    opcoes: ['Equatorial', 'Polar', 'Tropical', 'Semiárido'],
+    resposta: 'Polar',
+    categoria: 'Clima'
+  },
+  {
+    pergunta: 'Qual clima predomina no Nordeste brasileiro?',
+    opcoes: ['Polar', 'Semiárido', 'Frio', 'Mediterrâneo'],
+    resposta: 'Semiárido',
+    categoria: 'Clima'
+  },
+  {
+    pergunta: 'Qual é o deserto mais famoso da África?',
+    opcoes: ['Atacama', 'Saara', 'Gobi', 'Mojave'],
+    resposta: 'Saara',
+    categoria: 'Clima'
+  },
+  {
+    pergunta: 'Qual tipo de relevo é plano?',
+    opcoes: ['Montanha', 'Planície', 'Cordilheira', 'Planalto'],
+    resposta: 'Planície',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual relevo é elevado e relativamente plano?',
+    opcoes: ['Vale', 'Depressão', 'Planalto', 'Planície'],
+    resposta: 'Planalto',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual cordilheira fica na América do Sul?',
+    opcoes: ['Alpes', 'Andes', 'Himalaia', 'Montanhas Rochosas'],
+    resposta: 'Andes',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual rio passa pelo Egito?',
+    opcoes: ['Amazonas', 'Nilo', 'Yangtzé', 'Danúbio'],
+    resposta: 'Nilo',
+    categoria: 'Mapas'
+  },
+  {
+    pergunta: 'Qual é o maior rio do Brasil?',
+    opcoes: ['Tietê', 'São Francisco', 'Amazonas', 'Paraná'],
+    resposta: 'Amazonas',
+    categoria: 'Mapas'
+  },
+  {
+    pergunta: 'Qual linha imaginária divide leste e oeste?',
+    opcoes: ['Linha do Equador', 'Trópico de Capricórnio', 'Meridiano de Greenwich', 'Trópico de Câncer'],
+    resposta: 'Meridiano de Greenwich',
+    categoria: 'Mapas'
+  },
+  {
+    pergunta: 'Qual país possui a bandeira com folhas vermelhas?',
+    opcoes: ['México', 'Canadá', 'Chile', 'Japão'],
+    resposta: 'Canadá',
+    categoria: 'Bandeiras'
+  },
+  {
+    pergunta: 'Qual país possui a bandeira verde e amarela?',
+    opcoes: ['Brasil', 'Argentina', 'Portugal', 'México'],
+    resposta: 'Brasil',
+    categoria: 'Bandeiras'
+  },
+  {
+    pergunta: 'Qual país possui uma bandeira com círculo vermelho?',
+    opcoes: ['China', 'Japão', 'Coreia do Sul', 'Índia'],
+    resposta: 'Japão',
+    categoria: 'Bandeiras'
+  },
+  {
+    pergunta: 'Qual oceano fica entre América e Europa?',
+    opcoes: ['Pacífico', 'Atlântico', 'Índico', 'Ártico'],
+    resposta: 'Atlântico',
+    categoria: 'Oceanos'
+  },
+  {
+    pergunta: 'Qual oceano fica entre África e Austrália?',
+    opcoes: ['Atlântico', 'Pacífico', 'Índico', 'Ártico'],
+    resposta: 'Índico',
+    categoria: 'Oceanos'
+  },
+  {
+    pergunta: 'Qual país tem Machu Picchu?',
+    opcoes: ['Chile', 'Peru', 'Bolívia', 'México'],
+    resposta: 'Peru',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país é conhecido pelo tango?',
+    opcoes: ['Brasil', 'Chile', 'Argentina', 'Colômbia'],
+    resposta: 'Argentina',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país é famoso pelas tulipas e moinhos?',
+    opcoes: ['Holanda', 'Suécia', 'Bélgica', 'Dinamarca'],
+    resposta: 'Holanda',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual país fica na Península Ibérica?',
+    opcoes: ['Portugal', 'França', 'Itália', 'Alemanha'],
+    resposta: 'Portugal',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual é a capital da Coreia do Sul?',
+    opcoes: ['Seul', 'Pequim', 'Tóquio', 'Bangkok'],
+    resposta: 'Seul',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual é a capital do México?',
+    opcoes: ['Cancún', 'Cidade do México', 'Monterrey', 'Tijuana'],
+    resposta: 'Cidade do México',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual país é conhecido como Terra do Sol Nascente?',
+    opcoes: ['China', 'Japão', 'Índia', 'Tailândia'],
+    resposta: 'Japão',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual é a capital da Rússia?',
+    opcoes: ['Moscou', 'Kiev', 'Minsk', 'Varsóvia'],
+    resposta: 'Moscou',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual continente fica o Canadá?',
+    opcoes: ['Europa', 'Ásia', 'América do Norte', 'África'],
+    resposta: 'América do Norte',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual mar banha o Nordeste brasileiro?',
+    opcoes: ['Mar Mediterrâneo', 'Mar Vermelho', 'Oceano Atlântico', 'Mar Negro'],
+    resposta: 'Oceano Atlântico',
+    categoria: 'Oceanos'
+  },
+  {
+    pergunta: 'Qual país é famoso pela Muralha da China?',
+    opcoes: ['Japão', 'China', 'Coreia do Norte', 'Mongólia'],
+    resposta: 'China',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual é o ponto mais alto da Terra?',
+    opcoes: ['Everest', 'K2', 'Monte Branco', 'Aconcágua'],
+    resposta: 'Everest',
+    categoria: 'Relevo'
+  },
+  {
+    pergunta: 'Qual país possui o maior território da América do Sul?',
+    opcoes: ['Argentina', 'Peru', 'Brasil', 'Chile'],
+    resposta: 'Brasil',
+    categoria: 'Países'
+  },
+  {
+    pergunta: 'Qual continente fica a França?',
+    opcoes: ['Europa', 'Ásia', 'África', 'Oceania'],
+    resposta: 'Europa',
+    categoria: 'Continentes'
+  },
+  {
+    pergunta: 'Qual é a capital da China?',
+    opcoes: ['Pequim', 'Xangai', 'Hong Kong', 'Macau'],
+    resposta: 'Pequim',
+    categoria: 'Capitais'
+  },
+  {
+    pergunta: 'Qual oceano é o menor do mundo?',
+    opcoes: ['Ártico', 'Atlântico', 'Índico', 'Pacífico'],
+    resposta: 'Ártico',
+    categoria: 'Oceanos'
+  }
+];
+
+  const [tela, setTela] = React.useState('inicio');
+  const [fase, setFase] = React.useState(0);
+  const [pontos, setPontos] = React.useState(0);
+  const [vidas, setVidas] = React.useState(10);
+  const [fim, setFim] = React.useState(false);
+  const [mensagem, setMensagem] = React.useState('');
+
+  function responder(opcao) {
+    if (opcao === perguntas[fase].resposta) {
+      setPontos((p) => p + 10);
+      setMensagem('Resposta correta!');
+    } else {
+      setVidas((v) => v - 1);
+      setMensagem('Resposta errada!');
+    }
+
+    setTimeout(() => {
+      setMensagem('');
+
+      if (vidas - (opcao === perguntas[fase].resposta ? 0 : 1) <= 0) {
+        setFim(true);
+        return;
+      }
+
+      if (fase + 1 < perguntas.length) {
+        setFase((f) => f + 1);
+      } else {
+        setFim(true);
+      }
+    }, 1000);
+  }
+
+  function reiniciar() {
+    setTela('inicio');
+    setFase(0);
+    setPontos(0);
+    setVidas(10);
+    setFim(false);
+    setMensagem('');
+  }
+
+  if (tela === 'inicio') {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-blue-900 to-cyan-700 text-white flex flex-col items-center justify-center p-6">
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl max-w-md w-full text-center">
+          <div className="flex justify-center mb-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+              alt="Mapa"
+              className="w-40 rounded-2xl shadow-xl border-4 border-white"
+            />
+          </div>
+
+          <h1 className="text-5xl font-extrabold mb-4">🌎 GeoQuiz Brasil</h1>
+
+          <p className="mb-6 text-lg">
+            Um jogo mobile educativo com centenas de perguntas sobre geografia.
+          </p>
+
+          <div className="text-left mb-6 space-y-2">
+            <p>✅ Países</p>
+            <p>✅ Capitais</p>
+            <p>✅ Continentes</p>
+            <p>✅ Bandeiras</p>
+            <p>✅ Clima</p>
+            <p>✅ Relevo</p>
+            <p>✅ Mapas</p>
+          </div>
+
+          <button
+            onClick={() => setTela('jogo')}
+            className="w-full bg-green-500 hover:bg-green-600 transition-all py-4 rounded-2xl text-2xl font-bold"
+          >
+            ▶ Entrar
+          </button>
+
+          <button
+            onClick={() => alert('Jogo encerrado!')}
+            className="w-full mt-4 bg-red-500 hover:bg-red-600 transition-all py-4 rounded-2xl text-2xl font-bold"
+          >
+            ✖ Sair
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (fim) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-green-700 to-emerald-900 text-white flex items-center justify-center p-6">
+        <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center shadow-2xl max-w-md w-full">
+          <h1 className="text-5xl font-extrabold mb-4">🏆 Fim de Jogo</h1>
+
+          <p className="text-2xl mb-4">
+            Você completou o desafio de geografia!
+          </p>
+
+          <p className="text-xl mb-2">Pontuação Final: {pontos}</p>
+          <p className="text-xl mb-6">Perguntas respondidas: {fase + 1}</p>
+
+          <button
+            onClick={reiniciar}
+            className="w-full bg-yellow-400 hover:bg-yellow-500 text-black py-4 rounded-2xl text-2xl font-bold"
+          >
+            🔄 Jogar Novamente
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?q=80&w=1200')] bg-cover bg-center flex items-center justify-center p-4">
+      <div className="bg-white/95 backdrop-blur-md rounded-[32px] shadow-2xl p-6 w-full max-w-md border-4 border-cyan-500">
+        <div className="flex justify-between items-center mb-4">
+          <span className="font-bold text-lg">🌟 Pontos: {pontos}</span>
+          <span className="font-bold text-lg">❤️ Vidas: {vidas}</span>
+        </div>
+
+        <h2 className="text-2xl font-extrabold text-center mb-2 text-blue-700">
+          Pergunta {fase + 1} / {perguntas.length}
+        </h2>
+
+        <div className="flex justify-center mb-4">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/800px-World_map_-_low_resolution.svg.png"
+            alt="Mapa Mundial"
+            className="w-32 rounded-2xl border-2 border-cyan-400 shadow-lg"
+          />
+        </div>
+
+        <div className="text-center mb-2 text-sm font-bold text-gray-500">
+          Categoria: {perguntas[fase].categoria}
+        </div>
+
+        <div className="bg-gradient-to-r from-cyan-100 to-blue-100 rounded-3xl p-4 mb-6 border-2 border-cyan-300">
+          <p className="text-xl font-semibold text-center text-gray-800">
+            {perguntas[fase].pergunta}
+          </p>
+        </div>
+
+        <div className="grid gap-3">
+          {perguntas[fase].opcoes.map((opcao) => (
+            <button
+              key={opcao}
+              onClick={() => responder(opcao)}
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:scale-105 hover:from-blue-600 hover:to-cyan-600 transition-all text-white py-4 rounded-2xl font-bold text-lg shadow-xl"
+            >
+              {opcao}
+            </button>
+          ))}
+        </div>
+
+        {mensagem && (
+          <div className="mt-6 text-center text-xl font-bold text-blue-700 animate-pulse">
+            {mensagem}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
